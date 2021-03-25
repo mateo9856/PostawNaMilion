@@ -1,0 +1,29 @@
+﻿@model PostawNaMilion.ViewModels.AnswerViewModel
+
+@{ 
+    ViewBag.Title = "Quest";
+}
+
+<div style="margin-top:20px;" class="container col-sm-6 text-center">
+    <h3>@Model.Question.QuestionName</h3>
+    @{
+        if (Answer.IsValidate == false)
+        {
+            <h1 class="text-danger text-capitalize">Nie postawiłeś całej wartości</h1>
+        }
+
+    }
+    <h4 id="cashVal">Posiadasz @Player.Amount PLN</h4>
+    <h6 id="cashValue"> Do obstawienia zostało: <span id="betCash">@Player.Amount</span></h6>
+    <form asp-action="CheckAnswer" asp-controller="Game" method="post" class="">
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        @foreach (var answer in Model.Answers)
+        {
+            await Html.RenderPartialAsync("_AnswersForm", answer);
+        }
+        <input class="btn btn-info" type="submit" value="Sprawdź!" />
+    </form>
+</div>
+
+<script src ="~/js/AnswerInputs.js"></script>

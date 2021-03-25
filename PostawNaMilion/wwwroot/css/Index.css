@@ -1,0 +1,54 @@
+﻿.buttonStart {
+    margin-top: 20px;
+    width: 200px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+input[type=number] {
+    width:120px;
+    height:60px;
+    background-color:darkslategrey;
+    color:whitesmoke;
+    font-size:20px;
+    font-weight:bold;
+    border:1px solid white;
+    text-align:center;
+}
+
+.marginCenter {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.btnSubmit {
+    margin-top:15px;
+}
+
+.mainMenu {
+    margin-top:40px;
+    display:flex;
+    flex-direction:column;
+    margin-left:auto;
+}
+
+.playersTable {
+    display:none;
+}
+
+.playerForm {
+    display:none;
+}
+
+.LogoStyle {
+    margin: 0 10px;
+    width:250px;
+    position:relative;
+    
+}
+
+.goodAnswer {
+    background-color:black;
+    padding:5px;
+    border-radius:5px;
+}

@@ -1,0 +1,27 @@
+﻿@model PostawNaMilion.Models.Player
+
+@{
+    <h4 style="margin-top:30px;" class="text-center">Sprawdź dane</h4>
+
+    <table style="margin:20px auto;" class="table table-dark text-uppercase text-center table-bordered w-50">
+        <thead class="thead-dark">
+        <th class="text-center">Name</th>
+        <th class="text-center">Surname</th>
+        <th class="text-center">Amount</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Surname</td>
+                <td>@Model.Name</td>
+                <td>@Player.Amount</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <div class="col-md-12 text-center">
+        <button class="btn-success" style="padding: 10px;">
+            <a style="color:white;" asp-action="QuestionChoice" asp-controller="Game">Rozpocznij grę</a>
+        </button>
+    </div>
+
+}

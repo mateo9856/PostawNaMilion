@@ -1,0 +1,10 @@
+﻿@model PostawNaMilion.ViewModels.QuestionViewModel
+
+@{
+    <div style="margin-top:20px;" class="col-md-12 text-center">
+        <h1>Wybierz pytanie</h1>
+    @foreach(var quest in Model.ActiveQuestions) {
+        <a style="margin-top:10%" class="w-50 h-75 p-3 btn btn-danger" asp-controller="Game" asp-action="SelectedQuestion" asp-route-id="@quest.QuestionId">@quest.QuestionCategory</a>
+    }
+    </div>
+}

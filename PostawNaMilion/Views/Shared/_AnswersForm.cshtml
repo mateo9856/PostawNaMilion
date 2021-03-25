@@ -1,0 +1,29 @@
+﻿@model Answer
+@if (Player.AnswerNumber == 8)
+{
+    <div class="form-group">
+        <label>
+            <input type="hidden" name="answer" value="@Model.AnswerName" />
+            @Model.AnswerName
+        </label>
+    </div>
+    <div class="form-group">
+        <label>
+            <input type="number" id="@Model.AnswerId" step="25000" min="0" max="@Player.Amount" name="bet" value="@Model.MoneyBet" />
+        </label>
+    </div>
+}
+else
+{
+    <div class="form-group">
+        <label>
+            <input type="hidden" name="answer" value="@Model.AnswerName" />
+            @Model.AnswerName
+        </label>
+    </div>
+    <div class="form-group">
+        <label>
+            <input type="number" id="@Model.AnswerId" step="25000" name="bet" min="0" max="@Player.Amount" value="@Model.MoneyBet" />
+        </label>
+    </div>
+}

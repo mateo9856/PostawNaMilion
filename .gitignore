@@ -3,6 +3,12 @@ bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
 
 # Other files and folders
 .settings/

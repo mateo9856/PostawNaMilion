@@ -1,0 +1,42 @@
+﻿@model Player
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h4 style="margin-top:40px" class="text-white-50 text-left">Postaw na Milion</h4>
+<div class="text-center mainMenu">
+    <button class="btn btn-danger buttonStart">Graj!</button>
+    <button class="btn btn-info buttonStart"><a style="color:white;" asp-action="ScoreTable">Lista wyników</a></button>
+
+    <form asp-action="Index" method="post" class="form-group text-white form playerForm" style="margin:auto;">
+
+        <div style="margin-top:20px;" class="form-group">
+            <div class="text-left">
+                <label asp-for="Surname" class="col-md-2"></label>
+            </div>
+            <div class="col-md-5">
+                <input asp-for="Surname" class="form-inline" />
+            </div>
+            <span asp-validation-for="Surname" class="text-danger h5"></span>
+        </div>
+
+        <div style="margin-top:20px;" class="form-group">
+
+            <div class="text-left">
+                <label asp-for="Name" class="col-md-2"></label>
+            </div>
+            <div class="col-md-5">
+                <input asp-for="Name" class="form-inline" />
+            </div>
+            <span asp-validation-for="Name" class="text-danger h5"></span>
+        </div>
+
+            <div>
+                <div class="col-md-5">
+                    <input style="width:80px;height:40px" type="submit" class="btn-outline-success btnSubmit" value="Create!" />
+                </div>
+            </div>
+       
+
+    </form>
+
+</div>
